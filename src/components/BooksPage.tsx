@@ -153,7 +153,44 @@
       title: 'Primary Books',
       description: 'Comprehensive textbooks for primary school students',
       icon: BookText,
-      books: []
+      books: [
+        {
+          id: 'p1',
+          title: 'Star Primary English Book 1',
+          coverImage: '/starpryengbook1.png',
+          grade: 'Primary'
+        },
+        {
+          id: 'p2',
+          title: 'Star Primary English Book 2',
+          coverImage: '/starpryengbook2.png',
+          grade: 'Primary'
+        },
+        {
+          id: 'p3',
+          title: 'Star Primary English Book 3',
+          coverImage: '/starpryengbook3.png',
+          grade: 'Primary'
+        },
+        {
+          id: 'p4',
+          title: 'Star Primary English Book 4',
+          coverImage: '/starpryengbook4.png',
+          grade: 'Primary'
+        },
+        {
+          id: 'p5',
+          title: 'Star Primary English Book 5',
+          coverImage: '/starpryengbook5.png',
+          grade: 'Primary'
+        },
+        {
+          id: 'p6',
+          title: 'Star Primary English Book 6',
+          coverImage: '/starpryengbook6.png',
+          grade: 'Primary'
+        },
+      ]
     }
   ];
 
@@ -181,6 +218,8 @@
     }
   };
 
+  
+
   const BooksPage: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -199,6 +238,7 @@
     const booksInView = useInView(booksRef, { once: true, amount: 0.2 });
     const ctaInView = useInView(ctaRef, { once: true, amount: 0.2 });
 
+    
     const filteredBooks = useMemo(() => {
       return bookCategories.flatMap(category => 
         category.books.filter(book => 
