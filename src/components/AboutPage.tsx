@@ -50,7 +50,7 @@ const timeline = [
   {
     year: 2025,
     title: 'Expanding Horizons',
-    description: 'Planned release of new series for primary schools and expanded distribution network.'
+    description: 'Release of new series for primary schools and expanded distribution network.'
   }
 ];
 
