@@ -177,8 +177,8 @@ const AboutPage = () => {
                 variants={itemVariants}
                 className="text-gray-700 dark:text-gray-300"
               >
-                Founded in 2024, Empire Books Concept Ltd. is a pioneering book publishing company 
-                based in Nigeria. We specialize in creating high-quality textbooks for preschool, 
+                Founded in 2023, Empire Books Concept Ltd. is a pioneering book publishing company 
+                based in Nigeria. We specialise in creating high-quality textbooks for preschool, 
                 pre-primary, and primary students, helping schools and parents shape the future 
                 of education.
               </motion.p>
@@ -186,8 +186,7 @@ const AboutPage = () => {
                 variants={itemVariants}
                 className="text-gray-700 dark:text-gray-300"
               >
-                Our founder and CEO, Ronke Aina, brings years of experience as a seasoned book 
-                seller, ensuring that every textbook meets the academic needs of schools and 
+                Our founder and CEO, Ronke Aina, brings years of experience as an educational consultant, ensuring that every textbook meets the academic needs of schools and 
                 students alike.
               </motion.p>
             </motion.div>

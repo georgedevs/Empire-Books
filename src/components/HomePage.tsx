@@ -211,7 +211,7 @@ const HomePage = () => {
             </h1>
 
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-              Welcome to Empire Books Concept Ltd., where we specialize in creating and publishing 
+              Welcome to Empire Books Concept Ltd., where we specialise in creating and publishing 
               high-quality preschool, pre-primary, and primary textbooks. Founded in 2023 by 
               Ronke Aina, with a mission to research, develop and deliver innovative teaching resources that engage students, support educators and promote academic excellence..
             </p>
