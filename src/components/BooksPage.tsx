@@ -652,7 +652,7 @@
           </motion.div>
 
           {/* Pagination */}
-          {filteredBooks.length > 0 && selectedCategory !== 'primary' && renderPagination()}
+          {filteredBooks.length > 0 && renderPagination()}
         </div>
       </motion.section>
 
