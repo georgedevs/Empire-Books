@@ -222,26 +222,27 @@
       setSelectedCategory(categoryId);
       setShowScrollIndicator(true);
       
-      if (typeof window !== 'undefined' && window.innerWidth < 768) {
-        if (filteredBooksRef.current) {
-          filteredBooksRef.current.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-          });
-          
-          const yOffset = -80;
-          const y = filteredBooksRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: 'smooth' });
-        }
+      // Scroll behavior for all screen sizes
+      if (filteredBooksRef.current) {
+        // Calculate offset - can be adjusted based on your header height
+        const yOffset = -80; 
         
-        setShowScrollIndicator(true);
+        // Get the element's position
+        const y = filteredBooksRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
         
-        setTimeout(() => {
-          setShowScrollIndicator(false);
-        }, 3000);
+        // Smooth scroll to filtered results
+        window.scrollTo({
+          top: y,
+          behavior: 'smooth'
+        });
       }
+      
+      // Show scroll indicator briefly
+      setShowScrollIndicator(true);
+      setTimeout(() => {
+        setShowScrollIndicator(false);
+      }, 3000);
     };
-
 
     useEffect(() => {
       if (typeof window !== 'undefined') {
