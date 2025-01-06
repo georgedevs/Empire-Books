@@ -206,7 +206,7 @@
   };
 
   const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -235,7 +235,7 @@
 
     const heroInView = useInView(heroRef, { once: true, amount: 0.2 });
     const categoriesInView = useInView(categoriesRef, { once: true, amount: 0.2 });
-    const booksInView = useInView(booksRef, { once: true, amount: 0.2 });
+    const booksInView = useInView(booksRef, { once: true, amount: 0.1 });
     const ctaInView = useInView(ctaRef, { once: true, amount: 0.2 });
 
     
