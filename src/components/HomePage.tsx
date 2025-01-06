@@ -35,9 +35,9 @@ const featuredBooks = [
   },
   {
     id: 3,
-    title: 'Star Maths Pre Primary Book 1',
-    coverImage: '/star-maths-pre-primary-book1.png',
-    grade: 'Pre-Primary'
+    title: 'Star English Primary Book 1',
+    coverImage: '/starpryengbook1.png',
+    grade: 'Primary'
   }
 ];
 
