@@ -35,6 +35,24 @@
           coverImage: '/preschool2.png', 
           grade: 'Preschool'
         },
+        {
+          id: 'ps3',
+          title: 'Star Coloring Book 1',
+          coverImage: '/star-coloring-book1.png',
+          grade: 'Preschool'
+        },
+        {
+          id: 'ps4',
+          title: 'Star Quantitative Reasoning Kindergarten',
+          coverImage: '/star-quant-pre-primary-kg.png',
+          grade: 'Preschool'
+        },
+        {
+          id: 'ps5',
+          title: 'Star Verbal Reasoning Kindergarten',
+          coverImage: '/star-verbal-pre-primary-kg.png',
+          grade: 'Pre-Primary'
+        },
       ]
     },
     {
@@ -92,12 +110,6 @@
           grade: 'Pre-Primary'
         },
         {
-          id: 'pp10',
-          title: 'Star Quantitative Reasoning Kindergarten',
-          coverImage: '/star-quant-pre-primary-kg.png',
-          grade: 'Pre-Primary'
-        },
-        {
           id: 'pp11',
           title: 'Star Quantitative Reasoning Pre Primary Book 1',
           coverImage: '/star-quant-pre-primary-book1.png',
@@ -107,12 +119,6 @@
           id: 'pp12',
           title: 'Star Quantitative Reasoning Pre Primary Book 2',
           coverImage: '/star-quant-pre-primary-book2.png',
-          grade: 'Pre-Primary'
-        },
-        {
-          id: 'pp13',
-          title: 'Star Verbal Reasoning Kindergarten',
-          coverImage: '/star-verbal-pre-primary-kg.png',
           grade: 'Pre-Primary'
         },
         {
@@ -127,12 +133,7 @@
           coverImage: '/star-verbal-pre-primary-book2.png',
           grade: 'Pre-Primary'
         },
-        {
-          id: 'pp16',
-          title: 'Star Coloring Book 1',
-          coverImage: '/star-coloring-book1.png',
-          grade: 'Pre-Primary'
-        },
+
         {
           id: 'pp17',
           title: 'Star Coloring Book 2',
