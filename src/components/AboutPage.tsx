@@ -16,15 +16,21 @@ const teamMembers = [
     image: '/sig.png'
   },
   {
-    name: 'Odunjo Nkechi',
+    name: 'Kunle Odunji',
     role: 'General Manager',
-    description: 'Sarah brings 15 years of educational publishing expertise to ensure our content meets the highest academic standards.',
-    image: '/KUNLE.jpg'
+    description: 'Kunle oversees our strategic operations and drives innovation in educational publishing through effective team leadership.',
+    image: '/kunle.jpg'
+  },
+  {
+    name: 'Patricia Nkechi',
+    role: 'Editorial Manager',
+    description: 'Patricia leads our content development team, ensuring all publications meet the highest educational standards and curriculum requirements.',
+    image: '/pat.jpg'
   },
   {
     name: 'Olaniyan Segun',
-    role: 'Editorial Director',
-    description: 'Michael leads our design team in creating visually engaging and effective educational materials.',
+    role: 'Graphics Designer',
+    description: 'Segun leads our design team in creating visually engaging and effective educational materials.',
     image: '/segun.jpg'
   }
 ];
@@ -34,7 +40,7 @@ const timeline = [
   {
     year: 2023,
     title: 'Company Foundation & First Book Series Launch',
-    description: 'Empire Books Concept Ltd. was founded by Ronke Aina, with a vision to revolutionize educational publishing in Nigeria. In the same year, we successfully launched our first series of preschool and pre-primary textbooks.'
+    description: 'Empire Books Concept Ltd. was founded by Ronke Aina, with a vision to revolutionise educational publishing in Nigeria. In the same year, we successfully launched our first series of preschool and pre-primary textbooks.'
   },
   {
     year: 2024,
