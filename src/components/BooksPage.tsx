@@ -190,6 +190,42 @@
           coverImage: '/starpryengbook6.png',
           grade: 'Primary'
         },
+        {
+          id: 'p7',
+          title: 'Star Primary Math Book 1',
+          coverImage: '/starprymathbook1.png',
+          grade: 'Primary'
+        },
+        {
+          id: 'p8',
+          title: 'Star Primary Math Book 2',
+          coverImage: '/starprymathbook2.png',
+          grade: 'Primary'
+        },
+        {
+          id: 'p9',
+          title: 'Star Primary Math Book 3',
+          coverImage: '/starprymathbook3.png',
+          grade: 'Primary'
+        },
+        {
+          id: 'p10',
+          title: 'Star Primary Math Book 4',
+          coverImage: '/starprymathbook4.png',
+          grade: 'Primary'
+        },
+        {
+          id: 'p11',
+          title: 'Star Primary Math Book 5',
+          coverImage: '/starprymathbook5.png',
+          grade: 'Primary'
+        },
+        {
+          id: 'p12',
+          title: 'Star Primary Math Book 6',
+          coverImage: '/starprymathbook6.png',
+          grade: 'Primary'
+        },
       ]
     }
   ];
