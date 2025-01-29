@@ -19,6 +19,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { motion, useInView, useAnimation } from 'framer-motion';
 
+
+
 // Featured Books Data
 const featuredBooks = [
   {
@@ -100,48 +102,50 @@ const AnimatedSection : React.FC<AnimatedSectionProps> = ({ children, className 
 };
 
 interface AnimatedButtonProps {
-    children: any;
-    href: string;
-    variant?: 'white' | 'orange' | 'outline-white';
-    className?: string;
-    primary?: boolean;
-  }
+  children: any;
+  href: string;
+  variant?: 'white' | 'orange' | 'outline-white' | 'secondary';
+  className?: string;
+  primary?: boolean;
+}
 
-  const AnimatedButton: React.FC<AnimatedButtonProps> = ({ children, href, variant = 'orange', className = ''}) => {
-    const getVariantClasses = () => {
-        switch (variant) {
+const AnimatedButton: React.FC<AnimatedButtonProps> = ({ children, href, variant = 'orange', className = ''}) => {
+  const getVariantClasses = () => {
+      switch (variant) {
           case 'white':
-            return 'bg-white text-orange hover:bg-white/90';
+              return 'bg-white text-orange hover:bg-orange hover:text-white';
           case 'orange':
-            return 'bg-orange text-white hover:bg-orange/90';
+              return 'bg-orange text-white hover:bg-white hover:text-orange';
           case 'outline-white':
-            return 'border-2 border-white text-white hover:bg-white/20';
+              return 'border-2 border-white text-white hover:bg-white hover:text-orange';
+          case 'secondary':
+              return 'bg-white text-orange border-2 border-orange hover:bg-orange hover:text-white';
           default:
-            return 'bg-orange text-white hover:bg-orange/90';
-        }
-      };
- 
-      return (
-        <motion.div
+              return 'bg-orange text-white hover:bg-white hover:text-orange';
+      }
+  };
+
+  return (
+      <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className={className}
-        >
+      >
           <Link 
-            href={href} 
-            className={`
-              flex items-center justify-center 
-              px-6 py-3 rounded-lg 
-              transition duration-300 
-              space-x-2
-              ${getVariantClasses()}
-            `}
+              href={href} 
+              className={`
+                  flex items-center justify-center 
+                  px-6 py-3 rounded-lg 
+                  transition duration-300 
+                  space-x-2
+                  ${getVariantClasses()}
+              `}
           >
-            {children}
+              {children}
           </Link>
-        </motion.div>
-      );
-    };
+      </motion.div>
+  );
+};
 
     const ScrollToTopButton = () => {
       const [isVisible, setIsVisible] = useState(false);
@@ -190,78 +194,80 @@ const HomePage = () => {
   }, []);
   return (
     <div className="bg-white dark:bg-[#121212] text-brown dark:text-white">
-      {/* Hero Section */}
-      <motion.section 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+{/* Hero Section */}
+<motion.section 
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1 }} 
+  className="relative min-h-screen flex items-center justify-center overflow-hidden md:-mt-12"
+>
+  <div className="w-full max-w-[1400px] mx-auto px-4 lg:px-6 z-10">
+    <div className="flex flex-col-reverse md:flex-row items-center gap-8">
+      <motion.div 
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="w-full md:w-1/2 text-center md:text-left space-y-6"
       >
-        <div className="container mx-auto px-4 z-10 flex flex-col-reverse md:flex-row items-center">
-          <motion.div 
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="md:w-1/2 text-center md:text-left space-y-6"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-              Empowering Education 
-              <br />
-              <span className="text-orange">Through Quality Textbooks</span>
-            </h1>
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+          Empowering Education 
+          <br />
+          <span className="text-orange">Through Quality Textbooks</span>
+        </h1>
 
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-              Welcome to Empire Books Concept Ltd., where we specialise in creating and publishing 
-              high-quality preschool, pre-primary, and primary textbooks. Founded in 2023 by 
-              Ronke Aina, with a mission to research, develop and deliver innovative teaching resources that engage students, support educators and promote academic excellence..
-            </p>
+        <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+          Welcome to Empire Books Concept Ltd., where we specialise in creating and publishing 
+          high-quality preschool, pre-primary, and primary textbooks. Founded in 2023 by 
+          Ronke Aina, with a mission to research, develop and deliver innovative teaching resources that engage students, support educators and promote academic excellence.
+        </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <AnimatedButton href="/books" primary>
-                <BookOpen size={20} />
-                <span>Explore Our Books</span>
-              </AnimatedButton>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+    <AnimatedButton href="/books" variant="orange">
+        <BookOpen size={20} />
+        <span>Explore Our Books</span>
+    </AnimatedButton>
 
-              <AnimatedButton href="/contact">
-                <span>Contact Us</span>
-                <ChevronRight size={20} />
-              </AnimatedButton>
-            </div>
-          </motion.div>
+    <AnimatedButton href="/contact" variant="secondary">
+        <span>Contact Us</span>
+        <ChevronRight size={20} />
+    </AnimatedButton>
+</div>
+      </motion.div>
 
-          <motion.div
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="md:w-1/2 mb-8 md:mb-0 flex justify-center"
-          >
-            <Image 
-              src="/len.jpg" 
-              alt="Empire Books Textbooks" 
-              width={600} 
-              height={600}
-              className="object-contain transform hover:scale-105 transition duration-500"
-              priority
-            />
-          </motion.div>
-        </div>
+      <motion.div
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="w-full md:w-1/2 flex justify-end"
+      >
+        <Image 
+          src="/len.jpg" 
+          alt="Empire Books Textbooks" 
+          width={600} 
+          height={600}
+          className="object-contain transform hover:scale-105 transition duration-500"
+          priority
+        />
+      </motion.div>
+    </div>
+  </div>
 
-        {/* Background Illustration */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="absolute inset-0 dark:opacity-5 pointer-events-none"
-        >
-          <Image 
-            src="/abcd.jpg" 
-            alt="Book Pattern Background" 
-            layout="fill" 
-            objectFit="cover"
-            className="z-0"
-          />
-        </motion.div>
-      </motion.section>
+  {/* Background Illustration */}
+  <motion.div 
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 0.1 }}
+    transition={{ duration: 1, delay: 0.6 }}
+    className="absolute inset-0 dark:opacity-5 pointer-events-none"
+  >
+    <Image 
+      src="/abcd.jpg" 
+      alt="Book Pattern Background" 
+      layout="fill" 
+      objectFit="cover"
+      className="z-0"
+    />
+  </motion.div>
+</motion.section>
 
       {/* Featured Books Section */}
       <AnimatedSection className="py-16 bg-gray-50 dark:bg-[#1a1a1a]">
