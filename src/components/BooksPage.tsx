@@ -341,7 +341,7 @@ const BooksPage = () => {
   const categoriesRef = useRef(null)
   const booksRef = useRef(null)
   const ctaRef = useRef(null)
-  const filteredBooksRef = useRef(null)
+  const filteredBooksRef = useRef<HTMLDivElement>(null);
 
   const heroInView = useInView(heroRef, { once: true, amount: 0.2 })
   const categoriesInView = useInView(categoriesRef, { once: true, amount: 0.2 })
